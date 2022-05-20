@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+section
+{
+position:relative;
+background: #cdd9e4;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.8s;
+
+}
+section.dark
+{
+    background: #24292d;
+}
+section .cards
+{
+position: relative;
+width: 300px;
+height: 300px;
+background:#fff;
+box-shadow: 0px 15px 20px 0px rgba(0,0,0,0,025);
+border-radius: 16px;
+display: flex;
+justify-content:center;
+align-items: center;
+transition: background 0.5s;
+}
+section.dark .cards
+{
+background: #323840;
+}
+section .cards .content,
+section .cards .imgtext
+{
+display: flex;
+justify-content: center;    
+align-items: center;
+flex-direction:column;
+
+}
+section .cards .imgtext .imgbox
+{
+    position:relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+section .cards .imgtext .imgbox img
+{
+   position:absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .cards .imgtext h3
+{
+font-weight: 500;
+font-size: 1.4em;
+line-height: 1.2em;
+text-align: center;
+color:#2fa1ff;
+
+}
+section .cards .imgtext h3 span
+{
+    font-weight: 400;
+    color:#777;
+    font-size: 0.80em;
+    line-height: 1.1em;
+    text-align: center; 
+}
+section.dark .cards .imgtext h3 span
+{
+    color: #ccc;
+}
+section .cards .sci
+{
+display: flex;
+margin-top: 15px;
+   
+}
+section .cards .sci li
+{
+    list-style:none;
+
+}
+section .cards .sci li a
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #e9f5ff;
+    color: #2fa1ff;
+    margin: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.5s;
+}
+section.dark .cards .sci li a
+{
+    background: #3e4650;
+}
+section .cards .sci li a:hover
+{
+    color: #fff;
+}
+
+
+section .cards .sci li a .fa
+{
+  position:relative;
+  z-index: 1000; 
+}
+section .cards .sci li a:before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background: #2fa1ff;  
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+
+}
+
+section .cards .sci li a:hover:before
+{
+  transform: scale(1);
+
+}
+.toggle
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #e9f5ff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer ;
+    
+
+}
+section.dark .toggle
+{
+    background: #3e4650;    
+}
+.toggle:before
+{
+    content:  '\f186' ;
+    font-family: fontAwesome;
+    color: #2fa1ff;
+}
+section.dark .toggle:before
+{
+    content: '\f185';
+    color: #fff;
+}
